@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest something this tool should do.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Problem first, please - a feature request that starts with the pain you hit is much
+        easier to evaluate than one that starts with a proposed implementation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What were you doing, and where did the tool fall short?
+    validations:
+      required: true
+  - type: textarea
+    id: current-workaround
+    attributes:
+      label: How are you working around it today, if at all?
+    validations:
+      required: false
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution (optional)
+      description: If you have a specific approach in mind, describe it here. Not required.
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false

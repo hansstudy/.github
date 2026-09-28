@@ -1,0 +1,79 @@
+name: Bug report
+description: Report something that isn't working as expected.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please **redact secrets, hostnames,
+        usernames, IP addresses and licence keys** from any logs or screenshots before
+        pasting them below. If this is a security vulnerability rather than a bug, please
+        use private vulnerability reporting (Security tab -> "Report a vulnerability")
+        instead of this form - see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Tool version
+      description: The release tag or version you are running.
+      placeholder: v1.2.0
+    validations:
+      required: true
+  - type: input
+    id: os-platform
+    attributes:
+      label: OS / platform version
+      description: e.g. Windows 11 23H2, PowerShell 7.4, Windows Server 2022.
+      placeholder: Windows 11 23H2
+    validations:
+      required: true
+  - type: input
+    id: vendor-product-version
+    attributes:
+      label: Vendor product / SDK version (if applicable)
+      description: e.g. Cisco IOS-XE 17.9, Genetec Security Center 5.11.
+      placeholder: n/a
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, as exact as possible.
+      placeholder: |
+        1. Run '...'
+        2. With input '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      description: >-
+        Paste relevant log or console output. REDACT secrets, hostnames, usernames, IP
+        addresses, and licence keys first. This field renders as a code block automatically.
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I redacted secrets, hostnames, usernames, IPs, and licence keys from the above.
+          required: true
+        - label: I searched existing issues and this has not already been reported.
+          required: true
